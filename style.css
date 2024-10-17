@@ -20,18 +20,16 @@ p {
 h1 {
   font-family: "Noto Sans", sans-serif;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .baloo {
   font-family: "Baloo Paaji 2", sans-serif;
-  font-size: 1rem;
   font-weight: 400;
 }
 
 .noto {
   font-family: "Noto Sans", sans-serif;
-  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -47,4 +45,18 @@ body {
   -webkit-box-shadow: 3px 4px 8px 2px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 3px 4px 8px 2px rgba(0, 0, 0, 0.25);
   box-shadow: 3px 4px 8px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* CSS page category, ajouté par Juliette*/
+
+.lilas-bg{
+  background-color: var(--lilac);
+}
+
+.albert-sans{
+  font-family: 'Albert Sans';
+}
+
+.flex{
+  display: flex;
 }
