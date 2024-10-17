@@ -109,7 +109,8 @@ li {
 }
 
 .w-80{
-  width: 80px;
+  width: 160px;
+  padding: 1rem;
 }
 
 .justify-center{
@@ -124,9 +125,7 @@ li {
   margin: 30px;
 }
 
-.max-w-700{
-  max-width: 600px;
-}
+
 
 .margin-auto{
   margin: auto;
@@ -138,4 +137,17 @@ li {
 
 .w-460{
   width: 460px;
+}
+
+.m-right{
+  margin-right: 1rem;
+}
+
+.grey{
+  color: var(--grey);
+}
+
+.h2mb{
+  margin-bottom: 1rem;
+  font-weight: 500;
 }
