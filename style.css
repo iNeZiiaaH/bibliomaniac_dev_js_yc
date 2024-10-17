@@ -95,10 +95,6 @@ li {
   background-color: var(--lilac);
 }
 
-.albert-sans{
-  font-family: 'Albert Sans';
-}
-
 .flex{
   display: flex;
   flex-wrap: wrap;
@@ -138,4 +134,8 @@ li {
 
 .border-radius{
   border-radius: 10px;
+}
+
+.w-460{
+  width: 460px;
 }
