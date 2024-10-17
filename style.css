@@ -1,0 +1,50 @@
+/* Couleurs */
+
+:root {
+  --violet: #653fc0;
+  --lighter-violet: #8e6be1;
+  --yellow: #ffc001;
+  --lighter-yellow: #ffe8a4;
+  --grey: #9c9d9f;
+  --lighter-grey: #cbcbcb;
+  --lilac: #f3eeff;
+}
+
+/* Polices */
+
+p {
+  font-family: "Baloo Paaji 2", sans-serif;
+  font-size: 1rem;
+}
+
+h1 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.baloo {
+  font-family: "Baloo Paaji 2", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.noto {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Marges Espacements */
+
+body {
+  margin: 0%;
+}
+
+/* Box Shadow */
+
+.box-shadow {
+  -webkit-box-shadow: 3px 4px 8px 2px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 3px 4px 8px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 3px 4px 8px 2px rgba(0, 0, 0, 0.25);
+}
