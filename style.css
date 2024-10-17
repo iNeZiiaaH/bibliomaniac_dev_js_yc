@@ -89,3 +89,16 @@ li {
 .nav-icon {
   width: 210%;
 }
+/* CSS page category, ajouté par Juliette*/
+
+.lilas-bg{
+  background-color: var(--lilac);
+}
+
+.albert-sans{
+  font-family: 'Albert Sans';
+}
+
+.flex{
+  display: flex;
+}
