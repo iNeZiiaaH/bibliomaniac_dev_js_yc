@@ -101,4 +101,41 @@ li {
 
 .flex{
   display: flex;
+  flex-wrap: wrap;
+}
+
+.margin{
+  margin: 2rem;
+}
+
+.violet{
+  color: var(--violet);
+}
+
+.w-80{
+  width: 80px;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.main-margin{
+  margin: 30px;
+}
+
+.max-w-700{
+  max-width: 600px;
+}
+
+.margin-auto{
+  margin: auto;
+}
+
+.border-radius{
+  border-radius: 10px;
 }
