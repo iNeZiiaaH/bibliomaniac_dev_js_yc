@@ -1,3 +1,5 @@
+
+/* STYLE GLOBAL */
 /* Couleurs */
 
 :root {
@@ -14,7 +16,7 @@
 
 p {
   font-family: "Baloo Paaji 2", sans-serif;
-  font-size: 1.5rem;
+  font-size: 30px;
 }
 
 h1 {
@@ -45,6 +47,11 @@ h3 {
   font-weight: 400;
 }
 
+.noto-bold {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 800;
+}
+
 /* Marges Espacements */
 
 body {
@@ -59,7 +66,96 @@ body {
   box-shadow: 4px 4px 26px 2px rgba(0,0,0,0.4);
 }
 
-/* Nav Bar -- yael */ 
+/* Border Radius */
+
+.border-radius {
+  border-radius: 40px;
+}
+
+/* STYLE PAGE INDEX -- Yaël */
+
+.page-activity {
+  margin: 2.4rem;
+  margin-bottom: 200px;
+}
+
+.button-search {
+  border: 0;
+  background-color: white;
+  position: absolute;
+  right: 70px;
+}
+
+.page-search {
+  width: 5rem;
+}
+
+.article-container {
+  margin-block: 30px;
+}
+
+.activity-container {
+  display: flex;
+  flex-direction: row;
+
+  gap: 1.5rem;
+
+  overflow: scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  flex-shrink: 0;
+}
+
+.activity-container::-webkit-scrollbar {
+  display: none; 
+}
+
+.activity-card {
+  background-color: var(--lighter-violet);
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: row;
+
+  color: white;
+  max-width: fit-content;
+  min-width: 43rem;
+
+}
+
+.activity-card-img {
+  width: 200px;
+  margin-inline: 1rem;
+}
+
+.popular-book-img {
+  width: 500px;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+.popular-book-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+
+  overflow: scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  flex-shrink: 0;
+}
+
+.popular-book-container::-webkit-scrollbar {
+  display: none;
+}
+
+.popular-book-card {
+  text-align: center;
+}
+
+/* STYLE NAVBAR -- Yaël */ 
 
 li {
   list-style: none;
@@ -89,6 +185,9 @@ li {
 .nav-icon {
   width: 210%;
 }
+
+
+/* STYLE PAGE CATEGORY */
 /* CSS page category, ajouté par Juliette*/
 
 .lilas-bg{
