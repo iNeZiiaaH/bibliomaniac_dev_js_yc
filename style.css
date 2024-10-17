@@ -194,10 +194,64 @@ li {
   background-color: var(--lilac);
 }
 
-.albert-sans{
-  font-family: 'Albert Sans';
-}
-
 .flex{
   display: flex;
+  flex-wrap: wrap;
+}
+
+.margin{
+  margin: 2rem;
+}
+
+.violet{
+  color: var(--violet);
+}
+
+.w-80{
+  width: 160px;
+  padding: 1rem;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.main-margin{
+  margin: 30px;
+}
+
+
+
+.margin-auto{
+  margin: auto;
+}
+
+.border-radius{
+  border-radius: 10px;
+}
+
+.w-460{
+  width: 460px;
+}
+
+.m-right{
+  margin-right: 1rem;
+}
+
+.grey{
+  color: var(--grey);
+}
+
+.h2mb{
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.cardmb{
+  margin-bottom: 5rem;
+
 }
