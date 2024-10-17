@@ -14,24 +14,34 @@
 
 p {
   font-family: "Baloo Paaji 2", sans-serif;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 h1 {
   font-family: "Noto Sans", sans-serif;
   font-weight: 700;
+  font-size: 4rem;
+}
+
+h2 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+h3 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
   font-size: 2rem;
 }
 
 .baloo {
   font-family: "Baloo Paaji 2", sans-serif;
-  font-size: 1rem;
   font-weight: 400;
 }
 
 .noto {
   font-family: "Noto Sans", sans-serif;
-  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -44,7 +54,38 @@ body {
 /* Box Shadow */
 
 .box-shadow {
-  -webkit-box-shadow: 3px 4px 8px 2px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 3px 4px 8px 2px rgba(0, 0, 0, 0.25);
-  box-shadow: 3px 4px 8px 2px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 4px 4px 26px 2px rgba(0,0,0,0.4);
+  -moz-box-shadow: 4px 4px 26px 2px rgba(0,0,0,0.4);
+  box-shadow: 4px 4px 26px 2px rgba(0,0,0,0.4);
+}
+
+/* Nav Bar -- yael */ 
+
+li {
+  list-style: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10rem;
+}
+
+.nav-bar {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-block: 1.8rem;
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  height: 7rem;
+}
+
+.navlink {
+  cursor: pointer;
+}
+
+.nav-icon {
+  width: 210%;
 }
