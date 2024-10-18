@@ -15,25 +15,31 @@
 
 p {
   font-family: "Baloo Paaji 2", sans-serif;
-  font-size: 30px;
+  font-size: 34px;
 }
 
 h1 {
   font-family: "Noto Sans", sans-serif;
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 64px;
 }
 
 h2 {
   font-family: "Noto Sans", sans-serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 48px;
 }
 
 h3 {
   font-family: "Noto Sans", sans-serif;
-  font-weight: 600;
-  font-size: 2rem;
+  font-weight: 700;
+  font-size: 29px;
+}
+
+h4 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
 }
 
 .baloo {
@@ -57,6 +63,10 @@ body {
   margin: 0%;
 }
 
+.margin-0 {
+  margin: 0;
+}
+
 /* Box Shadow */
 
 .box-shadow {
@@ -68,13 +78,14 @@ body {
 /* Border Radius */
 
 .border-radius {
-  border-radius: 20px;
+  border-radius: 30px;
 }
 
 /* Liens */
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 /* STYLE NAVBAR -- Yaël */
@@ -112,16 +123,24 @@ li {
 
 .second-nav-bar {
   display: flex;
+  justify-content: right;
+  padding-top: 10px;
+}
+
+.second-nav-right {
+  display: flex;
+  gap: 30px;
+}
+
+.second-nav-left {
+  position: absolute;
+  left: 50px;
 }
 
 .nav-item {
   min-width: 60px;
   min-height: 50px;
   max-height: 60px;
-}
-
-.second-nav-right {
-  justify-self: right;
 }
 
 /* STYLE PAGE INDEX -- Yaël */
@@ -143,7 +162,8 @@ li {
 }
 
 .article-container {
-  margin-block: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .activity-container {
@@ -209,7 +229,6 @@ li {
 .category-container {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
 
   overflow: scroll;
   overflow-x: auto;
@@ -233,6 +252,23 @@ li {
 }
 
 /* STYLE PAGE STORYBOOK -- Yaël */
+
+.category-title {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+}
+
+.article-title {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.line-decor {
+  min-height: 50px;
+}
 
 .excellent-book-img {
   width: 500px;
@@ -260,6 +296,32 @@ li {
   padding: 1.2rem;
 }
 
+.storybook-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.storybook-large-card {
+  width: 860px;
+}
+
+.storybook-large-img {
+  width: 860px;
+  border-radius: 30px 30px 0px 0px;
+  object-fit: cover;
+}
+
+.storybook-card-text {
+  padding: 1rem;
+  margin-block: 0.5rem;
+}
+
+.yellow {
+  color: var(--yellow);
+}
 
 /* STYLE PAGE CATEGORY */
 /* CSS page category, ajouté par Juliette*/
@@ -294,21 +356,18 @@ li {
   align-items: center;
 }
 
-.main-margin{
+.main-margin {
   padding: 30px;
 }
 
-.margin-auto{
+.margin-auto {
   margin: auto;
 }
 
-.border-radius-10{
+.border-radius-10 {
   border-radius: 10px;
-} */
-
-
-
-.m-right {
+}
+*/ .m-right {
   margin-right: 1rem;
 }
 
@@ -316,82 +375,79 @@ li {
   color: var(--grey);
 }
 
-.h2mb{
+.h2mb {
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
 
 .cardmb {
   margin-bottom: 5rem;
- flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 /*PAGE ONE BOOK*/
 
-.bg-image{
+.bg-image {
   background-image: url("/images/shadow_and_bone_resized.jpg");
 }
 
-.filter{
+.filter {
   backdrop-filter: blur(25px);
-  background-color: rgba(0,0,0,0.4);
-
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.white  > *{
+.white > * {
   color: white;
 }
 
-.one-book-hero{
+.one-book-hero {
   font-weight: 400;
   font-size: 1.1rem;
   padding-bottom: 2rem;
 }
 
-.one-book-about{
- 
+.one-book-about {
   font-size: 2rem;
 }
 
-.one-book-summary{
+.one-book-summary {
   font-size: 1rem;
   font-weight: 400;
 }
 
-.w-460{
+.w-460 {
   height: 500px;
   width: 100vw;
   object-fit: cover;
   object-position: center;
 }
 
-.one-book-title{
+.one-book-title {
   font-weight: 400;
   display: none;
 }
 
-.cross-white{
+.cross-white {
   justify-content: end;
-  padding: 30 0 30 0 ;
+  padding: 30 0 30 0;
 }
 
-.cross{
+.cross {
   width: 66px;
 }
 
-.justify-between{
+.justify-between {
   justify-content: space-between;
 }
 
-.bookmark{
+.bookmark {
   width: 33px;
 }
 
-.menu-dots{
+.menu-dots {
   height: 33px;
 }
 
-.owl{
+.owl {
   display: none;
 }
-
