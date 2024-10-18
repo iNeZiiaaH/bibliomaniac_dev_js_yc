@@ -294,21 +294,19 @@ li {
   align-items: center;
 }
 
-.main-margin {
-  margin: 30px;
+.main-margin{
+  padding: 30px;
 }
 
-.margin-auto {
+.margin-auto{
   margin: auto;
 }
 
-/* .border-radius {
+.border-radius-10{
   border-radius: 10px;
 } */
 
-.w-460 {
-  width: 460px;
-}
+
 
 .m-right {
   margin-right: 1rem;
@@ -318,11 +316,82 @@ li {
   color: var(--grey);
 }
 
-.h2mb {
-  margin-bottom: 1rem;
+.h2mb{
+  margin-bottom: 0.5rem;
   font-weight: 500;
 }
 
 .cardmb {
   margin-bottom: 5rem;
+ flex-wrap: nowrap;
 }
+
+/*PAGE ONE BOOK*/
+
+.bg-image{
+  background-image: url("/images/shadow_and_bone_resized.jpg");
+}
+
+.filter{
+  backdrop-filter: blur(25px);
+  background-color: rgba(0,0,0,0.4);
+
+}
+
+.white  > *{
+  color: white;
+}
+
+.one-book-hero{
+  font-weight: 400;
+  font-size: 1.1rem;
+  padding-bottom: 2rem;
+}
+
+.one-book-about{
+ 
+  font-size: 2rem;
+}
+
+.one-book-summary{
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.w-460{
+  height: 500px;
+  width: 100vw;
+  object-fit: cover;
+  object-position: center;
+}
+
+.one-book-title{
+  font-weight: 400;
+  display: none;
+}
+
+.cross-white{
+  justify-content: end;
+  padding: 30 0 30 0 ;
+}
+
+.cross{
+  width: 66px;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.bookmark{
+  width: 33px;
+}
+
+.menu-dots{
+  height: 33px;
+}
+
+.owl{
+  display: none;
+}
+
