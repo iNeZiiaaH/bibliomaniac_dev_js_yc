@@ -1,4 +1,3 @@
-
 /* STYLE GLOBAL */
 /* Couleurs */
 
@@ -61,20 +60,73 @@ body {
 /* Box Shadow */
 
 .box-shadow {
-  -webkit-box-shadow: 4px 4px 26px 2px rgba(0,0,0,0.4);
-  -moz-box-shadow: 4px 4px 26px 2px rgba(0,0,0,0.4);
-  box-shadow: 4px 4px 26px 2px rgba(0,0,0,0.4);
+  -webkit-box-shadow: 4px 4px 26px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 4px 4px 26px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 26px 2px rgba(0, 0, 0, 0.4);
 }
 
 /* Border Radius */
 
 .border-radius {
-  border-radius: 40px;
+  border-radius: 20px;
+}
+
+/* Liens */
+
+a {
+  text-decoration: none;
+}
+
+/* STYLE NAVBAR -- Yaël */
+
+li {
+  list-style: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10rem;
+}
+
+.nav-bar {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-block: 1.8rem;
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  height: 7rem;
+}
+
+.navlink {
+  cursor: pointer;
+}
+
+.nav-icon {
+  width: 210%;
+}
+
+/* STYLE SECOND NAVBAR -- Yaël */
+
+.second-nav-bar {
+  display: flex;
+}
+
+.nav-item {
+  min-width: 60px;
+  min-height: 50px;
+  max-height: 60px;
+}
+
+.second-nav-right {
+  justify-self: right;
 }
 
 /* STYLE PAGE INDEX -- Yaël */
 
-.page-activity {
+.page-container {
   margin: 2.4rem;
   margin-bottom: 200px;
 }
@@ -108,7 +160,7 @@ body {
 }
 
 .activity-container::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 
 .activity-card {
@@ -121,7 +173,6 @@ body {
   color: white;
   max-width: fit-content;
   min-width: 43rem;
-
 }
 
 .activity-card-img {
@@ -155,103 +206,123 @@ body {
   text-align: center;
 }
 
-/* STYLE NAVBAR -- Yaël */ 
-
-li {
-  list-style: none;
-}
-
-.nav-links {
-  display: flex;
-  gap: 10rem;
-}
-
-.nav-bar {
-  position: fixed;
-  bottom: 0;
+.category-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  padding-block: 1.8rem;
-  background-color: rgb(255, 255, 255);
-  width: 100vw;
-  height: 7rem;
+  gap: 2rem;
+
+  overflow: scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  flex-shrink: 0;
 }
 
-.navlink {
-  cursor: pointer;
+.category-container::-webkit-scrollbar {
+  display: none;
 }
 
-.nav-icon {
-  width: 210%;
+.category-card {
+  max-width: fit-content;
+  min-width: 43rem;
+
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: row;
+}
+
+/* STYLE PAGE STORYBOOK -- Yaël */
+
+.excellent-book-img {
+  width: 500px;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+.excellent-book-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+
+  overflow: scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  flex-shrink: 0;
+}
+
+.excellent-book-container::-webkit-scrollbar {
+  display: none;
+}
+
+.excellent-book-card {
+  padding: 1.2rem;
 }
 
 
 /* STYLE PAGE CATEGORY */
 /* CSS page category, ajouté par Juliette*/
 
-.lilas-bg{
+.lilas-bg {
   background-color: var(--lilac);
 }
 
-.flex{
+.flex {
   display: flex;
   flex-wrap: wrap;
 }
 
-.margin{
+.margin {
   margin: 2rem;
 }
 
-.violet{
+.violet {
   color: var(--violet);
 }
 
-.w-80{
+.w-80 {
   width: 160px;
   padding: 1rem;
 }
 
-.justify-center{
+.justify-center {
   justify-content: center;
 }
 
-.items-center{
+.items-center {
   align-items: center;
 }
 
-.main-margin{
+.main-margin {
   margin: 30px;
 }
 
-
-
-.margin-auto{
+.margin-auto {
   margin: auto;
 }
 
-.border-radius{
+/* .border-radius {
   border-radius: 10px;
-}
+} */
 
-.w-460{
+.w-460 {
   width: 460px;
 }
 
-.m-right{
+.m-right {
   margin-right: 1rem;
 }
 
-.grey{
+.grey {
   color: var(--grey);
 }
 
-.h2mb{
+.h2mb {
   margin-bottom: 1rem;
   font-weight: 500;
 }
 
-.cardmb{
+.cardmb {
   margin-bottom: 5rem;
-
 }

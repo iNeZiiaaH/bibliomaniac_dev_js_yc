@@ -2,7 +2,8 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <title>Titre de la page</title>
+    <title>BiblioManiac - Home</title>
+    <link rel="icon" href="./images/LOGO.svg" />
     <link rel="stylesheet" href="style.css" />
     <!-- <script src="script.js"></script> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,7 +17,7 @@
     <header>
       <nav class="box-shadow nav-bar">
         <li class="nav-links">
-          <a href="http://google.com" class="navlink"
+          <a href="index.html" class="navlink"
             ><img src="./images/icons/owl.svg" alt="home" class="nav-icon"
           /></a>
           <a href="#" class="navlink"
@@ -38,13 +39,15 @@
       </nav>
     </header>
 
-    <main class="page-activity">
+    <main class="page-container">
       <button class="button-search">
         <img src="./images/icons/loupe.svg" class="page-search" />
       </button>
+
       <article class="article-container">
         <h1>Activity</h1>
         <div class="activity-container">
+
           <section class="activity-card border-radius">
             <img
               src="./images/icons/trophy.svg"
@@ -56,6 +59,7 @@
               <p>Makes you go out of the house and enjoy the sunshine.</p>
             </div>
           </section>
+
           <section class="activity-card border-radius">
             <img
               src="./images/icons/piled-books.svg"
@@ -67,6 +71,7 @@
               <p>These books are coming on the platform very soon.</p>
             </div>
           </section>
+
           <section class="activity-card border-radius">
             <img
               src="./images/icons/sun.svg"
@@ -78,12 +83,14 @@
               <p>Ayee! Youpee new content, we don't know what to write!</p>
             </div>
           </section>
+
         </div>
       </article>
 
       <article class="article-container">
         <h1>Popular Books</h1>
         <div class="popular-book-container">
+
           <section class="popular-book-card">
             <img
               src="./images/images/thriller.webp"
@@ -91,6 +98,7 @@
             />
             <p class="noto-bold">October</p>
           </section>
+
           <section class="popular-book-card">
             <img
               src="./images/images/ukulele.webp"
@@ -98,6 +106,7 @@
             />
             <p class="noto-bold">September</p>
           </section>
+
           <section class="popular-book-card">
             <img
               src="./images/images/cover.webp"
@@ -105,6 +114,7 @@
             />
             <p class="noto-bold">August</p>
           </section>
+
           <section class="popular-book-card">
             <img
               src="./images/images/underwater.webp"
@@ -112,11 +122,110 @@
             />
             <p class="noto-bold">July</p>
           </section>
+
         </div>
       </article>
 
       <article class="article-container">
         <h1>Category</h1>
+        <div class="category-container">
+
+          <a href="storybook.html">
+            <article
+              class="box-shadow lilas-bg margin max-w-700 border-radius cardmb category-card"
+            >
+              <div class="flex justify-center m-right">
+                <img
+                  src="images/icons/story-book-color.svg"
+                  alt="story book icon"
+                  class="w-80"
+                />
+              </div>
+              <div>
+                <h2 class="violet">Story books</h2>
+                <p class="grey">We read story books and look at cartoons.</p>
+              </div>
+            </article>
+          </a>
+
+          <a href="#">
+            <article
+              class="box-shadow lilas-bg margin max-w-700 border-radius cardmb category-card"
+            >
+              <div class="flex justify-center m-right">
+                <img
+                  src="images/icons/intelligence-book-color.svg"
+                  alt="intelligence book icon"
+                  class="w-80"
+                />
+              </div>
+              <div>
+                <h2 class="violet">Intelligence book</h2>
+                <p class="grey">
+                  The emotions develop in parallell with the intellect.
+                </p>
+              </div>
+            </article>
+          </a>
+
+          <a href="#">
+            <article
+              class="box-shadow lilas-bg margin max-w-700 border-radius cardmb category-card"
+            >
+              <di class="flex justify-center m-right">
+                <img
+                  src="images/icons/learning-book-color.svg"
+                  alt="learning book icon"
+                  class="w-80"
+                />
+              </di>
+              <div>
+                <h2 class="violet">Learning books</h2>
+                <p class="grey">Experiences teachers help you learn quickly.</p>
+              </div>
+            </article>
+          </a>
+
+          <a href="#">
+            <article
+              class="box-shadow lilas-bg margin max-w-700 border-radius cardmb category-card"
+            >
+              <div class="flex justify-center m-right">
+                <img
+                  src="images/icons/art-book-color.svg"
+                  alt="art book icon"
+                  class="w-80"
+                />
+              </div>
+              <div>
+                <h2 class="violet">Art books</h2>
+                <p class="grey">
+                  Encourage Children to be sensitive and artistic.
+                </p>
+              </div>
+            </article>
+          </a>
+
+          <a href="#">
+            <article
+              class="box-shadow lilas-bg margin max-w-700 border-radius cardmb category-card"
+            >
+              <div class="flex justify-center m-right">
+                <img
+                  src="images/icons/non-fiction-color.svg"
+                  alt="non-fiction book icon"
+                  class="w-80"
+                />
+              </div>
+              <div>
+                <h2 class="violet">Non-fiction books</h2>
+                <p class="grey">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+            </article>
+          </a>
+        </div>
       </article>
     </main>
   </body>
