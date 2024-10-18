@@ -108,6 +108,22 @@ li {
   width: 210%;
 }
 
+/* STYLE SECOND NAVBAR -- Yaël */
+
+.second-nav-bar {
+  display: flex;
+}
+
+.nav-item {
+  min-width: 60px;
+  min-height: 50px;
+  max-height: 60px;
+}
+
+.second-nav-right {
+  justify-self: right;
+}
+
 /* STYLE PAGE INDEX -- Yaël */
 
 .page-container {
@@ -241,7 +257,7 @@ li {
 }
 
 .excellent-book-card {
-  text-align: center;
+  padding: 1.2rem;
 }
 
 
