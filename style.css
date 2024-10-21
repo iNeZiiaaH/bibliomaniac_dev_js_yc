@@ -104,6 +104,10 @@
   color: white;
 }
 
+.violet {
+  color: var(--lighter-violet);
+}
+
 /* Polices */
 
 p {
@@ -315,6 +319,11 @@ li {
 
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--lilac);
+  padding: 0px 16px;
 }
 
 .category-card-img {
