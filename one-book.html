@@ -13,45 +13,36 @@
     />
   </head>
   <body>
-    <div class=" bg-image">
-      <main class="filter">
-
-        <div class="flex cross-white">
-          <img src="./images/icons/close-white.svg" alt="close" class="cross"/>
-        </div>
-        
-          <section class="flex">
-              <div>
-                  <img src="./images/shadow_and_bone_resized.jpg" alt="Shadow and bone cover" class="w-460"/>
+    <div class="bookbackground">
+      <main class="bookbackground__filter">
+        <a class="close__link" href="/storybook.html">
+          <img src="./images/icons/close-white.svg" alt="close" class="close__icon"/>
+        </a>
+          
+              <div class="mybook__img">
+                  <img src="./images/shadow_and_bone_resized.jpg" alt="Shadow and bone cover" class="mybook__img--img"/>
               </div>
-              <div class="white main-margin">
-
-                  <h1 class="one-book-title">Shadow and bone</h1>
-                  <h2 class="one-book-hero">Alina Starkov’s story closely follows the structure of the classic hero’s journey</h2>
-                  <section class="flex justify-between">
+              <section class="mybook__text">
+                  <h1 class="mybook__h1">Shadow and bone</h1>
+                  <h2 class="mybook__h2">Alina Starkov’s story closely follows the structure of the classic hero’s journey</h2>
+                  <div class="mybook__about">
                     <div>
-                      <h3 class="one-book-about">Leigh Barudo</h3>
-                      <p>Today . 7 min read</p>
+                      <h3 class="mybook__about--h3">Leigh Barudo</h3>
+                      <p class="mybook__about--p">Today . 7 min read</p>
                     </div>
-                    <div>
+                    <nav>
                       <img src="./images/icons/bookmark.svg" alt="bookmark" class="bookmark"/>
                       <img src="./images/icons/menu-dots.svg" alt="menu dots" class="menu-dots"/>
-                    </div>
-                  </section>
-
-                      <p class="one-book-summary">Alina’s journey is chronicling her transformation from a common orphan to a symbol of hope for the people of her homeland. Her own journey begins when she learns that she is the Sun Summoner after entering the unknown reaches of the Shadow Fold and unconsciously triggering a long-dormant power that she possesses when her oldest friend is attacked by the volcra. This moment coincides with the “call to adventure” and it sets off a chain of events that faithfully mirrors the steps commonly seen in the hero’s journey. This will eventually pit her against the Darkling, the enigmatic leader of the Grisha and the villain of the novel. </p>
-              </div>
-          </section>
-          <section class="white">
-            <a href="" class="desktop-links">Add to my list</a>
-            <a href="" class="desktop-links">Listen to the audiobook</a>
-            <a href="" class="desktop-links">Save as favorite</a>
-            <img src="./images/hibou.png" alt="owl logo" class="owl"/>
-            <a href="" class="read-button">Read</a>
-            <a href=""  class="audio-button"><img src="./images/icons/headphones.svg" class="audio"/></a>
-            <a href=""  class="star-button"><img src="./images/icons/star-empty.svg" class="star"/></a>
-          </section>
+                    </nav>
+                  </div>
+                      <p class="mybook__summary">Alina’s journey is chronicling her transformation from a common orphan to a symbol of hope for the people of her homeland. Her own journey begins when she learns that she is the Sun Summoner after entering the unknown reaches of the Shadow Fold and unconsciously triggering a long-dormant power that she possesses when her oldest friend is attacked by the volcra. </p>
+              </section>
+              
       </main>
     </div>
-
+    <nav class="mobilelinks">
+                <a href="/audiobook.html" class="read-button">Read</a>
+                <a href="/audiobook.html"  class="audio-button"><img src="./images/icons/headphones.svg" class="audio"/></a>
+                <a href=""  class="star-button"><img src="./images/icons/star-empty.svg" class="star"/></a>
+    </nav> 
   </body>

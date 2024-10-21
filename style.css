@@ -461,200 +461,244 @@ li {
 .progress {
   height: 5px;
 }
+
 /* STYLE PAGE CATEGORY */
-/* CSS page category, ajouté par Juliette*/
 
-.lilas-bg {
+.category{
+  margin: 24px;
+}
+
+.category__h1{
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.categorycard{
   background-color: var(--lilac);
-}
-
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.margin {
-  margin: 2rem;
-}
-
-.violet {
-  color: var(--violet);
-}
-
-.w-80 {
-  width: 160px;
-  padding: 1rem;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.main-margin {
-  padding: 30px;
-}
-
-.margin-auto {
-  margin: auto;
-}
-
-.border-radius-10 {
   border-radius: 10px;
-}
-*/ .m-right {
-  margin-right: 1rem;
-}
-
-.grey {
-  color: var(--grey);
+  padding: 0px 16px;
+  display: flex;
+  margin-bottom: 30px;
 }
 
-.h2mb {
-  margin-bottom: 0.5rem;
+.category__icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 8px;
+}
+
+.category__icon--img{
+  width: 80px;
+}
+
+.category__text{
+  padding: 0px 8px;
+}
+
+.category__text--h2{
+  color: var(--lighter-violet);
+  font-size: 20px;
   font-weight: 500;
+  margin: 8px 0px;
+  letter-spacing: 0.05em;
 }
 
-.cardmb {
-  margin-bottom: 5rem;
-  flex-wrap: nowrap;
+.category__text--p{
+  color: var(--grey);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2em;
 }
 
 /*PAGE ONE BOOK*/
 
-.bg-image {
+
+ .bookbackground {
   background-image: url("/images/shadow_and_bone_resized.jpg");
+  object-fit: contain;
+  object-position: center;
+  height: 100%;
 }
 
-.filter {
+.bookbackground__filter {
   backdrop-filter: blur(25px);
   background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
 }
 
-.white > * {
-  color: white;
+.close__link{
+  display: flex;
+  justify-content: end;
 }
 
-.one-book-hero {
-  font-weight: 400;
-  font-size: 1.1rem;
-  padding-bottom: 2rem;
+.close__icon{
+  width: 33px;
 }
 
-.one-book-about {
-  font-size: 2rem;
+.mybook__img{
+  height: 250px;
+  padding: 16px 0px;
 }
 
-.one-book-summary {
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-.w-460 {
-  height: 500px;
+.mybook__img--img{
+  height: 250px;
   width: 100vw;
   object-fit: cover;
   object-position: center;
 }
 
-.one-book-title {
-  font-weight: 400;
+.mybook__text{
+margin: 20px;
+
+}
+
+.mybook__text >*{
+  color: white;
+}
+
+.mybook__h1{
   display: none;
 }
 
-.cross-white {
-  justify-content: end;
-  padding: 30 0 30 0;
+.mybook__h2{
+  font-weight: 400;
+  font-size: 17px;
 }
 
-.cross {
-  width: 66px;
+.mybook__about--h3{
+  font-size : 16px ;
+  margin-bottom : 0;
 }
 
-.justify-between {
+.mybook__about--p{
+  font-size : 16px;
+  margin-top: 0;
+}
+
+.mybook__about{
+  display: flex;
   justify-content: space-between;
+}
+.mybook__summary{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2em;
 }
 
 .bookmark{
-  width: 60px;
+  width: 16px;
+
 }
 
 .menu-dots{
-  height: 60px;
+  height: 16px;
+  padding: 0 16px;
 }
 
-.owl {
-  display: none;
-}
 
 .read-button{
   background-color: #ffc001;
-  font-size: 3rem;
+  color: white;
+  font-size: 1rem;
   border-radius : 50px;
   font-family: "Baloo Paaji 2", sans-serif;
-  padding: 40px 120px 40px 120px;
-}
-
-
-.audio-button,.star-button{
-  background-color: #ffc001;
-  border-radius : 100px;
-  padding: 60px ;
-}
-
-.desktop-links{
-  display: none;
+  padding: 8px 32px;
 }
 
 .audio,.star{
- width: 60px;
+  width: 33px;
+ }
+
+.audio-button,.star-button{
+  background-color: #ffc001;
+  border-radius : 50px;
+  padding: 8px ;
 }
+
+.mobilelinks{
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+
 
 /*PAGE AUDIOBOOK*/
-.width-main-image{
-  width: 300px;
+
+.nav{
+  display: flex;
+  justify-content: space-between;
 }
 
-.audiobook-h1 {
+.nav__menu{
+ padding: 8px;
+ width: 24px;
+}
+
+.nav__close{
+  width: 24px;
+  padding: 8px;
+}
+
+.audiobook{
+  display: flex;
+}
+.audiobook__img{
+  margin: 0px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.audiobook__img--img{
+  width: 128px;
+  border-radius: 20px;
+  
+}
+
+.audiobook__h1 {
   font-weight: 500;
+  font-size: 24px;
 } 
 
-.audiobook-main-info{
-padding: 30px;
+.audiobook__text{
+padding: 8px;
 }
 
 .five-stars{
-  width: 70px;
-  margin-bottom: 16px;
+  width: 24px;
+  margin-bottom: 8px;
 }
 
-.audiobook-about{
+.audiobook__about{
   color: var(--grey);
   margin-bottom: 0;
   margin-top: 0px;
 }
 
-.audiobook-infos{
-  padding: 40px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+.audiobook__info{
+  padding: 8px;
+  display: flex;
   justify-content:  space-between;
+  margin:  16px;
+  background-color: var(--lilac);
 
 }
 
-.pages{
-  padding-right: 60px;
+.info__pages{
+  padding-right: 16px;
   border-right: solid grey 1px  ;
+  font-size: 12px;
 }
 
-.pages-ratio{
-  font-size: 3rem;
+.pages__ratio{
+  font-size: 16px;
 }
 
-/* CSS */
 #progressContainer {
   width: 100%;
   background-color: #cccccc;
@@ -664,21 +708,21 @@ padding: 30px;
 
 #progressBar {
   width: 50%;
-  height: 5px;
+  height: 3px;
   background-color: var(--yellow);
   
 }
 
-.reviews >*{
+.reviews > *{
   margin: 0px 30px;
 }
 .reviews-nb{
-  font-size: 3rem;
+  font-size: 24px;
 }
 
 .users-img{
   object-fit: contain;
-  width: 200px;
+  width: 80px;
 }
 
 .ambiant-section{
@@ -687,10 +731,12 @@ grid-template-columns: repeat(3, 1fr);
 grid-template-rows: repeat(2, 1fr);
 grid-column-gap: 0px;
 grid-row-gap: 0px;
+padding-top: 24px;
+margin: 0px;
 }
 
 .ambiant{
-  padding: 30px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -705,32 +751,66 @@ grid-row-gap: 0px;
 .amb-6 { grid-area: 2 / 3 / 3 / 4; }
 
 .ambiant > p {
-  font-size :2rem;
+  font-size :16px;
 }
 
 .ambiant > img{
-  width: 80px;
+  width: 30px;
+}
+
+.audiobook__hr{
+  margin: 0 16px;
 }
 
 .chapter{
-  padding: 60px;
+  padding: 8px 16px;
   background: rgb(255,255,255);
   background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(142,107,225,0.2) 100%);
+
 }
 
 .chapter__h2{
   color: var(--violet);
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 16px;
 }
 
 .chapter__h2::before{
   content: url('./images/icons/select.svg');
-  padding-right: 16px;
+  padding-right: 8px;
   position: relative;
 }
 
 .chapter__h3{
-  font-size: 3.5rem;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 600;
+  padding-left: 16px;
+}
+
+.chapter__p{
+  font-size: 13px;
+  padding-left: 16px;
+}
+
+.listener{
+  background-color: var(--lighter-violet);
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.listener__play{
+  background-color: var(--yellow);
+  border-radius: 50px;
+  width: 40px;
+  border: white solid 5px;
+}
+
+.listener__play__icon{
+  width: 40px;
+}
+
+.listener__skip__icon{
+  width: 30px;
+  padding : 10px 30px;
 }
