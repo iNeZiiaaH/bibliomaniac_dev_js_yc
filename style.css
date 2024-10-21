@@ -34,17 +34,24 @@ h3 {
   font-family: "Noto Sans", sans-serif;
   font-weight: 700;
   font-size: 29px;
+  margin: 0%;
 }
 
 h4 {
   font-family: "Noto Sans", sans-serif;
   font-weight: 500;
   font-size: 24px;
+  margin: 0%;
 }
 
 .baloo {
   font-family: "Baloo Paaji 2", sans-serif;
   font-weight: 400;
+}
+
+.baloo-bold {
+  font-family: "Baloo Paaji 2", sans-serif;
+  font-weight: 800;
 }
 
 .noto {
@@ -166,19 +173,6 @@ li {
   margin-bottom: 20px;
 }
 
-.activity-container {
-  display: flex;
-  flex-direction: row;
-
-  gap: 1.5rem;
-
-  overflow: scroll;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: none;
-  flex-shrink: 0;
-}
-
 .activity-container::-webkit-scrollbar {
   display: none;
 }
@@ -186,6 +180,7 @@ li {
 .activity-card {
   background-color: var(--lighter-violet);
   padding: 1.5rem;
+  margin-inline: 1.2rem;
 
   display: flex;
   flex-direction: row;
@@ -206,10 +201,9 @@ li {
   object-fit: cover;
 }
 
-.popular-book-container {
+.carousel-container {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
 
   overflow: scroll;
   overflow-x: auto;
@@ -218,27 +212,13 @@ li {
   flex-shrink: 0;
 }
 
-.popular-book-container::-webkit-scrollbar {
+.carousel-container::-webkit-scrollbar {
   display: none;
 }
 
 .popular-book-card {
   text-align: center;
-}
-
-.category-container {
-  display: flex;
-  flex-direction: row;
-
-  overflow: scroll;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: none;
-  flex-shrink: 0;
-}
-
-.category-container::-webkit-scrollbar {
-  display: none;
+  margin-inline: 1.2rem;
 }
 
 .category-card {
@@ -257,6 +237,7 @@ li {
   display: flex;
   flex-direction: row;
   margin-top: 5px;
+  gap: 1rem;
 }
 
 .article-title {
@@ -301,7 +282,8 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 2.5rem;
+  margin-block: 1rem;
 }
 
 .storybook-large-card {
@@ -323,6 +305,87 @@ li {
   color: var(--yellow);
 }
 
+/* STYLE PAGE LEARNING BOOK -- Yaël */
+
+.studies-container {
+  padding-bottom: 2rem;
+  border-bottom: solid 6px var(--lighter-grey);
+}
+
+.round-study {
+  text-align: center;
+}
+
+.round-button {
+  padding: 1.4rem;
+  margin-inline: 2.8rem;
+  border-radius: 50%;
+  border: 0;
+  width: 140px;
+  height: 140px;
+  
+}
+
+.studies-icon {
+  width: 90px;
+  height: 90px;
+}
+
+.bg-red {
+  background-color: #C9225B;
+}
+
+.bg-blue {
+  background-color: #2799E5;
+}
+
+.bg-yellow {
+  background-color: var(--yellow);
+}
+
+.bg-green {
+  background-color: #A5B525;
+}
+
+.bg-orange {
+  background-color: #F08B32;
+}
+
+.learning-books-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 1em 1em;
+}
+
+.learning-book-card {
+  width: 440px;
+}
+
+.learning-book-img {
+  width: 440px;
+  height: 340px;
+  object-fit: cover;
+
+  border-radius: 30px 30px 0px 0px;
+}
+
+.learning-book-text {
+  padding: 1.4rem;
+}
+
+.learning-book-big {
+  font-size: 3rem;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: var(--lighter-grey);
+}
+
+.progress {
+  height: 8px;
+}
 /* STYLE PAGE CATEGORY */
 /* CSS page category, ajouté par Juliette*/
 
