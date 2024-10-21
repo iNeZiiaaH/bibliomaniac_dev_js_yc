@@ -1,3 +1,15 @@
+/* RESPONSIVE DESIGN */
+
+/* For Desktop */
+@media screen and (min-width: 768px) {
+
+  .nav-bar {
+    display: none;
+  }
+
+}
+
+
 /* STYLE GLOBAL */
 /* Couleurs */
 
@@ -15,32 +27,33 @@
 
 p {
   font-family: "Baloo Paaji 2", sans-serif;
-  font-size: 34px;
+  font-size: 16px;
 }
 
 h1 {
   font-family: "Noto Sans", sans-serif;
   font-weight: 700;
-  font-size: 64px;
+  font-size: 26px;
+  margin-block: 10px;
 }
 
 h2 {
   font-family: "Noto Sans", sans-serif;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 22px;
 }
 
 h3 {
   font-family: "Noto Sans", sans-serif;
   font-weight: 700;
-  font-size: 29px;
+  font-size: 20px;
   margin: 0%;
 }
 
 h4 {
   font-family: "Noto Sans", sans-serif;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 18px;
   margin: 0%;
 }
 
@@ -77,15 +90,15 @@ body {
 /* Box Shadow */
 
 .box-shadow {
-  -webkit-box-shadow: 4px 4px 26px 2px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 4px 4px 26px 2px rgba(0, 0, 0, 0.4);
-  box-shadow: 4px 4px 26px 2px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.4);
 }
 
 /* Border Radius */
 
 .border-radius {
-  border-radius: 30px;
+  border-radius: 10px;
 }
 
 /* Liens */
@@ -103,7 +116,7 @@ li {
 
 .nav-links {
   display: flex;
-  gap: 10rem;
+  gap: 2rem;
 }
 
 .nav-bar {
@@ -115,15 +128,11 @@ li {
   padding-block: 1.8rem;
   background-color: rgb(255, 255, 255);
   width: 100vw;
-  height: 7rem;
+  height: 2.4rem;
 }
 
 .navlink {
   cursor: pointer;
-}
-
-.nav-icon {
-  width: 210%;
 }
 
 /* STYLE SECOND NAVBAR -- Yaël */
@@ -136,70 +145,21 @@ li {
 
 .second-nav-right {
   display: flex;
-  gap: 30px;
+  gap: 15px;
 }
 
 .second-nav-left {
   position: absolute;
-  left: 50px;
+  left: 20px;
 }
 
 .nav-item {
-  min-width: 60px;
-  min-height: 50px;
-  max-height: 60px;
+  min-width: 30px;
+  min-height: 30px;
+  max-height: 30px;
 }
 
-/* STYLE PAGE INDEX -- Yaël */
-
-.page-container {
-  margin: 2.4rem;
-  margin-bottom: 200px;
-}
-
-.button-search {
-  border: 0;
-  background-color: white;
-  position: absolute;
-  right: 70px;
-}
-
-.page-search {
-  width: 5rem;
-}
-
-.article-container {
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-.activity-container::-webkit-scrollbar {
-  display: none;
-}
-
-.activity-card {
-  background-color: var(--lighter-violet);
-  padding: 1.5rem;
-  margin-inline: 1.2rem;
-
-  display: flex;
-  flex-direction: row;
-
-  color: white;
-  max-width: fit-content;
-  min-width: 43rem;
-}
-
-.activity-card-img {
-  width: 200px;
-  margin-inline: 1rem;
-}
-
-.popular-book-img {
-  width: 500px;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-}
+/* CAROUSEL */
 
 .carousel-container {
   display: flex;
@@ -216,9 +176,58 @@ li {
   display: none;
 }
 
+/* STYLE PAGE INDEX -- Yaël */
+
+.page-container {
+  margin: 10px 10px 60px 10px;
+}
+
+.button-search {
+  border: 0;
+  position: absolute;
+  right: 20px;
+  width: 30px;
+}
+
+.article-container {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.activity-container::-webkit-scrollbar {
+  display: none;
+}
+
+.activity-card {
+  background-color: var(--lighter-violet);
+  padding: 1rem;
+  margin-right: 1rem;
+
+  display: flex;
+  flex-direction: row;
+
+
+  color: white;
+  max-width: fit-content;
+  min-width: 260px;
+  max-height: 180px;
+}
+
+.activity-card-img {
+  width: 80px;
+  margin-right: 5px;
+}
+
+.popular-book-img {
+  width: 140px;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
 .popular-book-card {
   text-align: center;
-  margin-inline: 1.2rem;
+  margin-block: 8px;
+  margin-right: 14px;
 }
 
 .category-card {
@@ -503,14 +512,159 @@ li {
   justify-content: space-between;
 }
 
-.bookmark {
-  width: 33px;
+.bookmark{
+  width: 60px;
 }
 
-.menu-dots {
-  height: 33px;
+.menu-dots{
+  height: 60px;
 }
 
 .owl {
   display: none;
+}
+
+.read-button{
+  background-color: #ffc001;
+  font-size: 3rem;
+  border-radius : 50px;
+  font-family: "Baloo Paaji 2", sans-serif;
+  padding: 40px 120px 40px 120px;
+}
+
+
+.audio-button,.star-button{
+  background-color: #ffc001;
+  border-radius : 100px;
+  padding: 60px ;
+}
+
+.desktop-links{
+  display: none;
+}
+
+.audio,.star{
+ width: 60px;
+}
+
+/*PAGE AUDIOBOOK*/
+.width-main-image{
+  width: 300px;
+}
+
+.audiobook-h1 {
+  font-weight: 500;
+} 
+
+.audiobook-main-info{
+padding: 30px;
+}
+
+.five-stars{
+  width: 70px;
+  margin-bottom: 16px;
+}
+
+.audiobook-about{
+  color: var(--grey);
+  margin-bottom: 0;
+  margin-top: 0px;
+}
+
+.audiobook-infos{
+  padding: 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  justify-content:  space-between;
+
+}
+
+.pages{
+  padding-right: 60px;
+  border-right: solid grey 1px  ;
+}
+
+.pages-ratio{
+  font-size: 3rem;
+}
+
+/* CSS */
+#progressContainer {
+  width: 100%;
+  background-color: #cccccc;
+  overflow: hidden;
+  position: relative;
+}
+
+#progressBar {
+  width: 50%;
+  height: 5px;
+  background-color: var(--yellow);
+  
+}
+
+.reviews >*{
+  margin: 0px 30px;
+}
+.reviews-nb{
+  font-size: 3rem;
+}
+
+.users-img{
+  object-fit: contain;
+  width: 200px;
+}
+
+.ambiant-section{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.ambiant{
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.amb-1 { grid-area: 1 / 1 / 2 / 2; }
+.amb-2 { grid-area: 1 / 2 / 2 / 3; }
+.amb-3 { grid-area: 1 / 3 / 2 / 4; }
+.amb-4 { grid-area: 2 / 1 / 3 / 2; }
+.amb-5 { grid-area: 2 / 2 / 3 / 3; }
+.amb-6 { grid-area: 2 / 3 / 3 / 4; }
+
+.ambiant > p {
+  font-size :2rem;
+}
+
+.ambiant > img{
+  width: 80px;
+}
+
+.chapter{
+  padding: 60px;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(142,107,225,0.2) 100%);
+}
+
+.chapter__h2{
+  color: var(--violet);
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+
+.chapter__h2::before{
+  content: url('./images/icons/select.svg');
+  padding-right: 16px;
+  position: relative;
+}
+
+.chapter__h3{
+  font-size: 3.5rem;
+  font-weight: 400;
 }
