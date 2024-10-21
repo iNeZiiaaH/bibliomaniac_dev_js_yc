@@ -401,10 +401,45 @@ li {
 /* STYLE PAGE CATEGORY */
 /* CSS page category, ajouté par Juliette*/
 
-.lilas-bg {
-  background-color: var(--lilac);
+.category__h1{
+  font-weight: 400;
+  font-size: 24px;
 }
 
+.categorycard{
+  background-color: var(--lilac);
+  border-radius: 10px;
+  padding: 0px 16px;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.category__icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 8px;
+}
+
+.category__icon--img{
+  width: 80px;
+}
+
+.category__text{
+  padding: 0px 8px;
+}
+
+.category__text--h2{
+  color: var(--lighter-violet);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.category__text--p{
+  color: var(--grey);
+  font-size: 14px;
+  font-weight: 400;
+}
 .flex {
   display: flex;
   flex-wrap: wrap;
