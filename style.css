@@ -389,11 +389,14 @@ li {
 
 .bg-image {
   background-image: url("/images/shadow_and_bone_resized.jpg");
+  object-fit: cover;
+  height: 100%;
 }
 
 .filter {
   backdrop-filter: blur(25px);
   background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
 }
 
 .white > * {
@@ -402,7 +405,7 @@ li {
 
 .one-book-hero {
   font-weight: 400;
-  font-size: 1.1rem;
+  font-size: 3rem;
   padding-bottom: 2rem;
 }
 
@@ -411,7 +414,7 @@ li {
 }
 
 .one-book-summary {
-  font-size: 1rem;
+  font-size: 2.5rem;
   font-weight: 400;
 }
 
@@ -446,6 +449,7 @@ li {
 
 .menu-dots{
   height: 60px;
+  padding: 30px;
 }
 
 .owl {
@@ -454,6 +458,7 @@ li {
 
 .read-button{
   background-color: #ffc001;
+  color: white;
   font-size: 3rem;
   border-radius : 50px;
   font-family: "Baloo Paaji 2", sans-serif;
@@ -471,17 +476,48 @@ li {
   display: none;
 }
 
+.mobilelinks{
+  position: absolute;
+  bottom : 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.mobilelinks > a{
+  margin: 30px;
+}
 .audio,.star{
  width: 60px;
 }
 
 /*PAGE AUDIOBOOK*/
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__menu{
+ padding: 30px;
+ width: 60px;
+}
+
+.nav__close{
+  width: 50px;
+  padding: 30px;
+}
+
+.audiobook-info-img{
+  margin: 0px 30px;
+}
+
 .width-main-image{
   width: 300px;
 }
 
 .audiobook-h1 {
   font-weight: 500;
+  font-size: 3rem;
 } 
 
 .audiobook-main-info{
@@ -501,9 +537,9 @@ padding: 30px;
 
 .audiobook-infos{
   padding: 40px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+
   justify-content:  space-between;
+  margin:  50px 50px;
 
 }
 
@@ -516,7 +552,6 @@ padding: 30px;
   font-size: 3rem;
 }
 
-/* CSS */
 #progressContainer {
   width: 100%;
   background-color: #cccccc;
@@ -578,6 +613,7 @@ grid-row-gap: 0px;
   padding: 60px;
   background: rgb(255,255,255);
   background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(142,107,225,0.2) 100%);
+
 }
 
 .chapter__h2{
@@ -595,4 +631,27 @@ grid-row-gap: 0px;
 .chapter__h3{
   font-size: 3.5rem;
   font-weight: 400;
+}
+
+.listener{
+  background-color: var(--lighter-violet);
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.listener__play{
+  background-color: var(--yellow);
+  border-radius: 50px;
+  width: 80px;
+  border: white solid 5px;
+}
+
+.listener__play__icon{
+  width: 80px;
+}
+
+.listener__skip__icon{
+  width: 60px;
+  padding : 10px 30px;
 }
