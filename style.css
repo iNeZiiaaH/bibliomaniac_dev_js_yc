@@ -3,12 +3,69 @@
 /* For Desktop */
 @media screen and (min-width: 768px) {
 
-  .nav-bar {
-    display: none;
-  }
-
+.nav-bar {
+  display: none;
 }
 
+.desktop-navbar {
+  display: flex;
+  flex-direction: row;
+}
+
+#logo {
+  position: relative;
+  z-index: 1;
+}
+
+.desktop-navlinks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 60px;
+
+  position: relative;
+  z-index: 1;
+}
+
+.profile-button {
+  min-width: 100px;
+  max-width: 130px;
+  height: 55px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  background-color: white;
+}
+
+.nav-icon {
+  width: 20px;
+}
+
+.nav-shape {
+  position: absolute;
+  width: 100vw;
+}
+}
+
+
+/* For Mobile */
+
+@media screen and (max-width: 768px) {
+
+  .nav-bar {
+    display: flex;
+  }
+
+  .desktop-navbar {
+    display: none;
+  }
+  }
 
 /* STYLE GLOBAL */
 /* Couleurs */
@@ -21,6 +78,30 @@
   --grey: #9c9d9f;
   --lighter-grey: #cbcbcb;
   --lilac: #f3eeff;
+}
+
+.bg-red {
+  background-color: #C9225B;
+}
+
+.bg-blue {
+  background-color: #2799E5;
+}
+
+.bg-yellow {
+  background-color: var(--yellow);
+}
+
+.bg-green {
+  background-color: #A5B525;
+}
+
+.bg-orange {
+  background-color: #F08B32;
+}
+
+.white {
+  color: white;
 }
 
 /* Polices */
@@ -122,13 +203,11 @@ li {
 .nav-bar {
   position: fixed;
   bottom: 0;
-  display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-block: 1.8rem;
   background-color: rgb(255, 255, 255);
   width: 100vw;
-  height: 2.4rem;
+  padding-block: 14px;
 }
 
 .navlink {
@@ -179,7 +258,7 @@ li {
 /* STYLE PAGE INDEX -- Yaël */
 
 .page-container {
-  margin: 10px 10px 60px 10px;
+  margin: 10px 15px 110px 15px;
 }
 
 .button-search {
@@ -190,8 +269,7 @@ li {
 }
 
 .article-container {
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-block: 10px;
 }
 
 .activity-container::-webkit-scrollbar {
@@ -226,64 +304,55 @@ li {
 
 .popular-book-card {
   text-align: center;
-  margin-block: 8px;
+  margin-top: 8px;
   margin-right: 14px;
 }
 
 .category-card {
-  max-width: fit-content;
-  min-width: 43rem;
-
-  padding: 1rem;
+  max-width: 340px;
+  min-width: 340px;
+  margin: 10px 15px 10px 0px;
 
   display: flex;
   flex-direction: row;
 }
 
+.category-card-img {
+  width: 80px;
+  margin-inline: 5px;
+}
+
 /* STYLE PAGE STORYBOOK -- Yaël */
+
+.category-title-icon {
+  width: 50px;
+}
 
 .category-title {
   display: flex;
   flex-direction: row;
   margin-top: 5px;
-  gap: 1rem;
 }
 
 .article-title {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 12px;
   align-items: center;
 }
 
 .line-decor {
-  min-height: 50px;
+  min-height: 30px;
 }
 
 .excellent-book-img {
-  width: 500px;
+  width: 140px;
   aspect-ratio: 3/4;
   object-fit: cover;
 }
 
-.excellent-book-container {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-
-  overflow: scroll;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: none;
-  flex-shrink: 0;
-}
-
-.excellent-book-container::-webkit-scrollbar {
-  display: none;
-}
-
 .excellent-book-card {
-  padding: 1.2rem;
+  padding: 12px;
 }
 
 .storybook-container {
@@ -296,12 +365,12 @@ li {
 }
 
 .storybook-large-card {
-  width: 860px;
+  width: 360px;
 }
 
 .storybook-large-img {
-  width: 860px;
-  border-radius: 30px 30px 0px 0px;
+  width: 360px;
+  border-radius: 10px 10px 0px 0px;
   object-fit: cover;
 }
 
@@ -317,8 +386,8 @@ li {
 /* STYLE PAGE LEARNING BOOK -- Yaël */
 
 .studies-container {
-  padding-bottom: 2rem;
-  border-bottom: solid 6px var(--lighter-grey);
+  padding-bottom: 1rem;
+  border-bottom: solid 3px var(--lighter-grey);
 }
 
 .round-study {
@@ -326,38 +395,22 @@ li {
 }
 
 .round-button {
-  padding: 1.4rem;
-  margin-inline: 2.8rem;
+  padding: 1rem;
+  margin-inline: 1rem;
   border-radius: 50%;
   border: 0;
-  width: 140px;
-  height: 140px;
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
 }
 
 .studies-icon {
-  width: 90px;
-  height: 90px;
-}
-
-.bg-red {
-  background-color: #C9225B;
-}
-
-.bg-blue {
-  background-color: #2799E5;
-}
-
-.bg-yellow {
-  background-color: var(--yellow);
-}
-
-.bg-green {
-  background-color: #A5B525;
-}
-
-.bg-orange {
-  background-color: #F08B32;
+  width: 40px;
+  height: 40px;
 }
 
 .learning-books-container {
@@ -368,23 +421,36 @@ li {
 }
 
 .learning-book-card {
-  width: 440px;
+  width: 170px;
+  max-height: 260px;
+  padding-bottom: 15px;
 }
 
 .learning-book-img {
-  width: 440px;
-  height: 340px;
+  min-width: 170px;
+  width: 170px;
+  height: 130px;
   object-fit: cover;
 
-  border-radius: 30px 30px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .learning-book-text {
-  padding: 1.4rem;
+  padding: 1rem;
+}
+
+.learning-book-text p {
+  font-size: small;
+  font-weight: 600;
+  margin: 0%;
+}
+
+.learning-book-text h4 {
+  font-weight: 800;
 }
 
 .learning-book-big {
-  font-size: 3rem;
+  font-size:large;
 }
 
 .progress-bar {
@@ -393,7 +459,7 @@ li {
 }
 
 .progress {
-  height: 8px;
+  height: 5px;
 }
 /* STYLE PAGE CATEGORY */
 /* CSS page category, ajouté par Juliette*/
