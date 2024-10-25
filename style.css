@@ -62,6 +62,9 @@
 	.desktop-navbar {
 		display: none;
 	}
+	.nav-icon {
+		width: 35px;
+	}
 }
 
 /* STYLE GLOBAL */
