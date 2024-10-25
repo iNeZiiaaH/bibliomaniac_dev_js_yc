@@ -62,31 +62,17 @@ function resultsBooks(books) {
 
         bookDiv.querySelector('.details-button').addEventListener('click', (event) => {
             event.stopPropagation();
-            window.location.href = `one-book.html?bookId=${bookId}`;
+            const query = document.getElementById('searchInput').value;
+            window.location.href = `one-book.html?bookId=${bookId}&query=${encodeURIComponent(query)}`;
         });
 
         bookDiv.addEventListener('click', () => {
-            window.location.href = `one-book.html?bookId=${bookId}`;
+            window.location.href = `one-book.html?bookId=${bookId}&query=${encodeURIComponent(query)}`;
         });
 
         result.appendChild(bookDiv);
     });
 }
-
-
-
-document.getElementById('searchForm').addEventListener('submit', async function(event) {
-    event.preventDefault();
-
-    const query = document.getElementById('searchInput').value;
-    if (query) {
-        const books = await allBooks(query);
-        resultsBooks(books);
-        console.log(books);
-    } else {
-        document.getElementById('results').innerHTML = '<p>Entrez une recherche.</p>';
-    }
-});
 
 function getBookId() {
     const params = new URLSearchParams(window.location.search);
@@ -155,3 +141,44 @@ async function showDetails () {
         bookDetailDiv.innerHTML = '<p>Erreur lors de la récupération des détails du livre.</p>';
     }
 }
+
+function researchResults() {
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get('query');
+
+    if(query) {
+        window.location.href = `allBooks.html?query=${encodeURIComponent(query)}`;
+    } else {
+        window.location.href = `allBooks.html`;
+    }
+}
+document.getElementById('searchForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
+
+    const query = document.getElementById('searchInput').value;
+    if (query) {
+        const books = await allBooks(query);
+        resultsBooks(books);
+        console.log(books);
+    } else {
+        document.getElementById('results').innerHTML = '<p>Entrez une recherche.</p>';
+    }
+});
+
+document.addEventListener('DOMContentLoaded', async () => {
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get('query');
+
+    if(query) {
+        document.getElementById('searchInput').value = query;
+        const books = await allBooks(query);
+        resultsBooks(books);
+    }
+});
+
+
+
+
+
+
+

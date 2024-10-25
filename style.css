@@ -624,7 +624,7 @@ li {
 }
 
 .mobilelinks {
-	position: absolute;
+	position: sticky;
 	bottom: 20px;
 	display: flex;
 	justify-content: space-around;
