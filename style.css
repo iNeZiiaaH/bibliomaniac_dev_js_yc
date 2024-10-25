@@ -162,6 +162,7 @@ h4 {
 /* Marges Espacements */
 
 body {
+	height: 100%;
 	margin: 0%;
 }
 
@@ -519,10 +520,11 @@ li {
 /*PAGE ONE BOOK*/
 
 .bookbackground {
-	background-image: url('/images/shadow_and_bone_resized.jpg');
-	object-fit: contain;
-	object-position: center;
-	height: 100%;
+	background-color: #f0f0f0;
+	min-height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
 }
 
 .bookbackground__filter {
@@ -541,8 +543,10 @@ li {
 }
 
 .mybook__img {
-	height: 250px;
-	padding: 16px 0px;
+	height: auto; /* Altura de la imagen */
+	display: flex; /* Flex para alinear el contenido */
+	justify-content: center; /* Centra la imagen horizontalmente */
+	align-items: center; /* Centra la imagen verticalmente */
 }
 
 .mybook__img--img {
