@@ -1,48 +1,79 @@
+const API_KEY = 'AIzaSyBoK-BTaIZIRtzwIbFKmsCfK11_7LfURc0';
 const API_URL = 'https://www.googleapis.com/books/v1/volumes?q=';
 
-async function allBooks (query) {
+async function allBooks(query, maxResults = 30) {
+    const url = `${API_URL}${query}&key=${API_KEY}&maxResults=${maxResults}`;
+
+    showLoader();
+
     try {
-        const response = await fetch(`${API_URL}${query}`);
-        const data = await response.json();
-        return data.items || [];
-        console.log(data.items);
+        const response = await fetch(url);
+        const { items = [] } = await response.json();
+        await delay(2000);
+        return items;
     } catch (error) {
-         console.error('erreur lors de la récuperation', error);
-         return [];
+        console.error('Erreur lors de la récupération des livres:', error);
+        return [];
+    } finally {
+        hideLoader();
     }
 }
+
+function showLoader() {
+    const loader = document.querySelector('.loader'); 
+    loader.style.display = 'flex'; 
+}
+
+function hideLoader() {
+    const loader = document.querySelector('.loader');
+    loader.style.display = 'none'; 
+}
+
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 
 function resultsBooks(books) {
     const result = document.getElementById('results');
     result.innerHTML = '';
 
-    if (books.length ===0) {
-        result.innerHTML = '<p> Aucun book trouvés </p>';
-        return result;
+    if (!books.length) {
+        result.innerHTML = '<p>Aucun livre trouvé.</p>';
+        return;
     }
 
     books.forEach(book => {
+        const { id: bookId, volumeInfo } = book;
+        const title = volumeInfo.title || 'Titre non disponible';
+        const authors = volumeInfo.authors ? volumeInfo.authors.join(', ') : 'Auteur non disponible';
+        const imgSrc = volumeInfo.imageLinks?.thumbnail || '';
+
         const bookDiv = document.createElement('div');
         bookDiv.classList.add('book');
-        const bookId = book.id;
+        bookDiv.innerHTML = `
+            <div class="book-content">
+                ${imgSrc ? `<img src="${imgSrc}" alt="${title}" class="book-image">` : '<div class="no-image">Pas d\'image disponible</div>'}
+                <h3 class="book-title">${title}</h3>
+                <p class="book-authors">Auteur : ${authors}</p>
+                <button class="details-button">Voir les détails</button>
+            </div>
+        `;
 
-        const title = book.volumeInfo.title || 'Titre non disponible';
-        const authors = book.volumeInfo.authors ? book.volumeInfo.authors.join(',') : 'autheur non disponible';
-        const img = book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : '';
-
-        bookDiv.innerHTML = 
-            `${img ? `<img src="${img}" alt="${title}">` : ''}
-            <h3>${title}</h3>
-            <p>Auteur : ${authors}</p>`;
-
-        result.appendChild(bookDiv);
-
-        bookDiv.addEventListener('click', ()=> {
+        bookDiv.querySelector('.details-button').addEventListener('click', (event) => {
+            event.stopPropagation();
             window.location.href = `one-book.html?bookId=${bookId}`;
         });
 
-    })
+        bookDiv.addEventListener('click', () => {
+            window.location.href = `one-book.html?bookId=${bookId}`;
+        });
+
+        result.appendChild(bookDiv);
+    });
 }
+
+
 
 document.getElementById('searchForm').addEventListener('submit', async function(event) {
     event.preventDefault();
@@ -64,7 +95,7 @@ function getBookId() {
 
 async function getDetails (bookId) {
     try {
-        const API_URL_DETAIL = `https://www.googleapis.com/books/v1/volumes/${bookId}`;
+        const API_URL_DETAIL = `https://www.googleapis.com/books/v1/volumes/${bookId}?key=${API_KEY}`;
         const response = await fetch(API_URL_DETAIL);
         if(!response) {
             throw new Error('Error obtaining the book details')
@@ -84,17 +115,42 @@ async function showDetails () {
     if(bookDetails) {
         const title = bookDetails.volumeInfo.title || 'Titre non disponible';
         const authors = bookDetails.volumeInfo.authors ? bookDetails.volumeInfo.authors.join(',') : 'autheur non disponible';
-        const img = bookDetails.volumeInfo.imageLinks ? bookDetails.volumeInfo.imageLinks.medium : '';
+        const img = bookDetails.volumeInfo.imageLinks ? bookDetails.volumeInfo.imageLinks.extraLarge : '';
         const description = bookDetails.volumeInfo.description || 'Description non disponible';
         const publishedDate = bookDetails.volumeInfo.publishedDate || 'Date de publication non disponible';
+           
+        const textContainer = document.querySelector('.mybook__text');
+        const imgContainer = document.querySelector('.mybook__img');
+        const aboutContainer = document.querySelector('.mybook__about');
+        
+        if(img) {
+            const imgElement = document.createElement('img');
+            imgElement.src = img;
+            imgElement.alt = title;
+            imgElement.classList.add('mybook__img--img');
+            imgContainer.appendChild(imgElement);
+        }
+        
+        const titleElement = document.createElement('h1');
+        titleElement.classList.add('mybook__h1');
+        titleElement.textContent = title;
+        
+        const authorsElement = document.createElement('h3');
+        authorsElement.classList.add('mybook__about--h3');
+        authorsElement.textContent = authors;
 
-        bookDetailDiv.innerHTML = `
-            ${img ? `<img src="${img}" alt="${title}">`: ''}
-            <h2>${title}</h2>
-            <p>Autheur : ${authors}</p>
-            <p>Date de publication : ${publishedDate}</p>
-            <p>Description : ${description}</p>
-            `;
+        const dateElement = document.createElement('p');
+        dateElement.textContent = `Date de publication: ${publishedDate}`;
+
+        const descriptionElement = document.createElement('p');
+        descriptionElement.classList.add('mybook__summary');
+        descriptionElement.innerHTML = `Description : ${description}`;
+
+        textContainer.appendChild(titleElement);
+        textContainer.appendChild(dateElement);
+        textContainer.appendChild(descriptionElement);
+        aboutContainer.appendChild(authorsElement);
+
     } else {
         bookDetailDiv.innerHTML = '<p>Erreur lors de la récupération des détails du livre.</p>';
     }
